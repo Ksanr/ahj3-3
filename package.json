@@ -1,4 +1,41 @@
 {
   "name": "ahj3-3",
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.14.1",
+  "description": "Gallery manager with URL validation",
+  "main": "src/index.js",
+  "keywords": [
+    "gallery",
+    "image",
+    "validation"
+  ],
+  "author": "Ksanr",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@eslint/js": "^10.0.1",
+    "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.4",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.5.0",
+    "html-webpack-plugin": "^5.6.7",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "prettier": "^3.8.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3"
+  },
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  }
 }
