@@ -22,28 +22,18 @@ module.exports = [
         },
     },
     {
-        files: ["*.config.js", "*.setup.js", "eslint.config.js"],
-        languageOptions: {
-            ecmaVersion: 2022,
-            sourceType: "commonjs",
-            globals: {
-                ...globals.node,
-            },
-        },
-        rules: {
-            "no-console": "off",
-            "no-unused-vars": "warn",
-            "no-undef": "off",
-        },
-    },
-    {
         ignores: [
             "dist/",
             "node_modules/",
             "coverage/",
             ".yarn/",
+            ".pnp.cjs",
+            ".pnp.loader.mjs",
             "**/*.test.js",
+            "*.config.js",
+            "jest.setup.js",
             "webpack.config.js",
+            "babel.config.js",
         ],
     },
 ];
