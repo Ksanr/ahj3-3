@@ -12,7 +12,7 @@ export default class Gallery {
     });
 
     this.cards.push(card);
-    this.container.appendChild(card.getElement());
+    this.container.append(card.getElement());
   }
 
   removeCard(cardToRemove) {

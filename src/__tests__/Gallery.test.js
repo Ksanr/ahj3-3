@@ -7,7 +7,7 @@ describe('Gallery', () => {
   beforeEach(() => {
     container = document.createElement('div');
     gallery = new Gallery(container);
-    document.body.appendChild(container);
+    document.body.append(container);
   });
 
   afterEach(() => {
@@ -94,7 +94,7 @@ describe('Gallery', () => {
     const card = gallery.cards[0];
     // Удаляем элемент из DOM вручную
     if (card.element && card.element.parentNode) {
-      card.element.parentNode.removeChild(card.element);
+      card.element.remove();
     }
 
     // Удаление не должно вызвать ошибку

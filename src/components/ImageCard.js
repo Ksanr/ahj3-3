@@ -41,7 +41,7 @@ export default class ImageCard {
     wrapper.appendChild(img);
     wrapper.appendChild(deleteBtn);
     this.element.appendChild(wrapper);
-    this.element.appendChild(nameDiv);
+    this.element.append(nameDiv);
   }
 
   delete() {

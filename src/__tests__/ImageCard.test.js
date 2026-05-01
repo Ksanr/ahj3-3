@@ -9,7 +9,7 @@ describe('ImageCard', () => {
   beforeEach(() => {
     document.body.innerHTML = '';
     imageCard = new ImageCard(mockName, mockUrl, mockOnDelete);
-    document.body.appendChild(imageCard.getElement());
+    document.body.append(imageCard.getElement());
   });
 
   afterEach(() => {
@@ -56,7 +56,7 @@ describe('ImageCard', () => {
 
   test('должен обрабатывать ошибку загрузки изображения', () => {
     const errorCard = new ImageCard('Error Image', 'https://invalid-url.com/image.jpg', jest.fn());
-    document.body.appendChild(errorCard.getElement());
+    document.body.append(errorCard.getElement());
 
     // Просто проверяем, что карточка создалась и добавлена в DOM
     expect(errorCard.getElement()).toBeTruthy();
@@ -69,7 +69,7 @@ describe('ImageCard', () => {
   test('должен корректно обрабатывать повторное удаление', () => {
     const onDeleteMock = jest.fn();
     const card = new ImageCard('Test', 'https://via.placeholder.com/150', onDeleteMock);
-    document.body.appendChild(card.getElement());
+    document.body.append(card.getElement());
 
     // Первое удаление
     card.delete();

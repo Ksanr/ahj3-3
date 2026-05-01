@@ -18,10 +18,10 @@ describe('AddForm', () => {
     errorContainer = document.createElement('div');
     onAddCallback = jest.fn();
 
-    document.body.appendChild(nameInput);
-    document.body.appendChild(urlInput);
-    document.body.appendChild(button);
-    document.body.appendChild(errorContainer);
+    document.body.append(nameInput);
+    document.body.append(urlInput);
+    document.body.append(button);
+    document.body.append(errorContainer);
 
     addForm = new AddForm(
       nameInput,

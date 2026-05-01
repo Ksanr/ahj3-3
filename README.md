@@ -23,6 +23,10 @@
 - GitHub Actions (CI/CD)
 - GitHub Pages (хостинг)
 
+## Демонстрация работы
+
+[GitHub Pages](https://ksanr.github.io/ahj3-3/)
+
 ## Установка и запуск
 
 ```bash
